@@ -1,0 +1,257 @@
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.bg-warm {
+  background: url("../assets/hot.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.bg-cool {
+  background: url("../assets/cool.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.bg-main {
+  background: url("../assets/neutral.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.weather-content-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.weather-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+  border-radius: 15px;
+  width: min(80%, 43em);
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  padding: 2em;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+}
+.weather-content .weather-place {
+  color: #fffcf7;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+.weather-content .weather-date {
+  color: #fffcf7;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  margin-top: 0.2em;
+}
+.weather-content .weather-temp {
+  color: #fffcf7;
+  font-size: clamp(4rem, 10vw, 6.5rem);
+}
+.weather-content .weather-status {
+  color: #fffcf7;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+}
+@supports not (font-size: clamp(1.5rem, 3vw, 2.2rem)) {
+  .weather-content .weather-place {
+    font-size: min(1.5rem, 2.2rem);
+  }
+  .weather-content .weather-date {
+    font-size: min(1.3rem, 1.5rem);
+  }
+  .weather-content .weather-temp {
+    font-size: min(4.5rem, 6.5rem);
+  }
+  .weather-content .weather-status {
+    font-size: min(1.3rem, 1.8rem);
+  }
+}
+.weather-content .weather-loading {
+  text-align: center;
+}
+.weather-content .weather-loading h2 {
+  margin-top: 0.3em;
+  color: #fffcf7;
+  font-size: clamp(1.3rem, 3vw, 1.7rem);
+}
+.weather-content .weather-main-menu {
+  text-align: center;
+}
+.weather-content .weather-main-menu .weather-main-title {
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  justify-content: center;
+}
+.weather-content .weather-main-menu .weather-main-title img {
+  width: clamp(3rem, 5vw, 5.5rem);
+}
+.weather-content .weather-main-menu .weather-main-title h1 {
+  margin-top: 0.45em;
+  color: #fffcf7;
+  font-size: clamp(1.55rem, 3vw, 2.3rem);
+}
+@supports not (width: clamp(3rem, 5vw, 5.5rem)) {
+  .weather-content .weather-main-menu .weather-main-title img {
+    width: min(3rem, 6.5rem);
+  }
+}
+.weather-content .weather-main-menu .weather-main-subtitle {
+  margin-top: 0.7em;
+}
+.weather-content .weather-main-menu .weather-main-subtitle h1 {
+  color: #fffcf7;
+  font-size: clamp(1.45rem, 3vw, 1.8rem);
+}
+
+@media (min-width: 43em) {
+  .weather-content .weather-main-menu .weather-main-title {
+    flex-direction: row;
+  }
+  .weather-content .weather-main-menu .weather-main-title h1 {
+    margin-top: 0em;
+  }
+  .weather-content .weather-main-menu .weather-main-title img {
+    margin-left: 0.8em;
+  }
+}
+.weather-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5em;
+}
+
+.buttons-wrapper {
+  margin-top: 2em;
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 1em;
+}
+
+@media (min-width: 35em) {
+  .buttons-wrapper {
+    grid-auto-flow: column;
+  }
+}
+.description-modal-wrapper {
+  position: relative;
+  top: 50%;
+  -webkit-animation: scale-in-center 0.4s ease-in-out both;
+  animation: scale-in-center 0.4s ease-in-out both;
+}
+
+.description-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: none !important;
+  border-radius: 15px;
+  background: #3a435e;
+  padding: 1.65em;
+  width: min(85%, 16em);
+}
+.description-modal-content h2 {
+  color: #fffcf7;
+}
+.description-modal-content .description-modal-elements {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.description-modal-content .description-modal-elements .description-modal-elements-description {
+  margin-bottom: 0.45em;
+}
+.description-modal-content .description-modal-button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 27em) {
+  .description-modal-content {
+    width: 22em;
+  }
+  .description-modal-content .description-modal-elements {
+    flex-direction: row;
+    text-align: left;
+  }
+  .description-modal-content .description-modal-elements .description-modal-elements-description {
+    margin-left: 0.5em;
+  }
+}
+.coordinate-modal-wrapper {
+  position: relative;
+  top: 50%;
+  -webkit-animation: scale-in-center 0.4s ease-in-out both;
+  animation: scale-in-center 0.4s ease-in-out both;
+}
+
+.coordinate-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: none !important;
+  border-radius: 15px;
+  background: #3a435e;
+  padding: 2em;
+  text-align: center;
+  width: min(80%, 15em);
+}
+.coordinate-modal-content h1 {
+  color: #fffcf7;
+}
+.coordinate-modal-content .coordinate-modal-element {
+  display: flex;
+  flex-direction: column;
+}
+.coordinate-modal-content .coordinate-modal-element .coordinate-modal-element-description {
+  margin-bottom: 0.5em;
+}
+.coordinate-modal-content .coordinate-modal-button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 30em) {
+  .coordinate-modal-content {
+    text-align: left;
+    width: 24em;
+  }
+  .coordinate-modal-content .coordinate-modal-element {
+    flex-direction: row;
+  }
+  .coordinate-modal-content .coordinate-modal-element .coordinate-modal-element-description {
+    margin-left: 0.7em;
+  }
+}
+
+/*# sourceMappingURL=Home.module.css.map */

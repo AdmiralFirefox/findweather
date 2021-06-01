@@ -1,0 +1,53 @@
+//Fonts
+$font-color: #fffcf7;
+
+//Background
+@mixin weather-background() {
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+//Modal Position
+@mixin centralize-modal() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: none !important;
+  border-radius: 15px;
+}
+
+//Modal Animation
+@mixin modal-animation() {
+  position: relative;
+  top: 50%;
+  -webkit-animation: scale-in-center 0.4s ease-in-out both;
+  animation: scale-in-center 0.4s ease-in-out both;
+}
+
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}

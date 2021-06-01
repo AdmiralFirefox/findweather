@@ -1,0 +1,46 @@
+@use "../themeprovider" as theme;
+
+.description-modal-wrapper {
+  @include theme.modal-animation();
+}
+
+.description-modal-content {
+  @include theme.centralize-modal();
+  background: #3a435e;
+  padding: 1.65em;
+  width: min(85%, 16em);
+
+  h2 {
+    color: theme.$font-color;
+  }
+
+  .description-modal-elements {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .description-modal-elements-description {
+      margin-bottom: 0.45em;
+    }
+  }
+
+  .description-modal-button-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 27em) {
+  .description-modal-content {
+    width: 22em;
+
+    .description-modal-elements {
+      flex-direction: row;
+      text-align: left;
+
+      .description-modal-elements-description {
+        margin-left: 0.5em;
+      }
+    }
+  }
+}

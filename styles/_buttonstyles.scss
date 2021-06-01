@@ -1,0 +1,13 @@
+.buttons-wrapper {
+  margin-top: 2em;
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 1em;
+
+}
+
+@media (min-width: 35em) {
+  .buttons-wrapper {
+    grid-auto-flow: column;
+  }
+}

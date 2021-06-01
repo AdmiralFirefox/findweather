@@ -1,0 +1,46 @@
+@use "../themeprovider" as theme;
+
+.coordinate-modal-wrapper {
+  @include theme.modal-animation();
+}
+
+.coordinate-modal-content {
+  @include theme.centralize-modal();
+  background: #3a435e;
+  padding: 2em;
+  text-align: center;
+  width: min(80%, 15em);
+
+  h1 {
+    color: theme.$font-color;
+  }
+
+  .coordinate-modal-element {
+    display: flex;
+    flex-direction: column;
+
+    .coordinate-modal-element-description {
+      margin-bottom: 0.5em;
+    }
+  }
+
+  .coordinate-modal-button-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 30em) {
+  .coordinate-modal-content {
+    text-align: left;
+    width: 24em;
+
+    .coordinate-modal-element {
+      flex-direction: row;
+
+      .coordinate-modal-element-description {
+        margin-left: 0.7em;
+      }
+    }
+  }
+}
