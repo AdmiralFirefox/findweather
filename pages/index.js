@@ -103,6 +103,11 @@ export default function Home() {
                     <h1 className={mainStyles["weather-temp"]}>
                       {Math.round(weather.main.temp)}°C
                     </h1>
+                    <img
+                      src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}.png`}
+                      alt="Weather Icon"
+                      style={{ width: "5em" }}
+                    />
                     <h1 className={mainStyles["weather-status"]}>
                       {weather.weather[0].main}
                     </h1>
