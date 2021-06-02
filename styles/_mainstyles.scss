@@ -1,17 +1,17 @@
 @use "themeprovider" as theme;
 
 .bg-warm {
-  background: url("../assets/hot.jpg");
+  background: url("../assets/hot.jpg"), theme.$linear-gradient;
   @include theme.weather-background();
 }
 
 .bg-cool {
-  background: url("../assets/cool.jpg");
+  background: url("../assets/cool.jpg"), theme.$linear-gradient;
   @include theme.weather-background();
 }
 
 .bg-main {
-  background: url("../assets/neutral.jpg");
+  background: url("../assets/neutral.jpg"), theme.$linear-gradient;
   @include theme.weather-background();
 }
 

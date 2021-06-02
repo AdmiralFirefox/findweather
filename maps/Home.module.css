@@ -23,24 +23,27 @@
   }
 }
 .bg-warm {
-  background: url("../assets/hot.jpg");
+  background: url("../assets/hot.jpg"), linear-gradient(0deg, #00000088 30%, #ffffff44 100%);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+  background-blend-mode: multiply;
 }
 
 .bg-cool {
-  background: url("../assets/cool.jpg");
+  background: url("../assets/cool.jpg"), linear-gradient(0deg, #00000088 30%, #ffffff44 100%);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+  background-blend-mode: multiply;
 }
 
 .bg-main {
-  background: url("../assets/neutral.jpg");
+  background: url("../assets/neutral.jpg"), linear-gradient(0deg, #00000088 30%, #ffffff44 100%);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+  background-blend-mode: multiply;
 }
 
 .weather-content-wrapper {

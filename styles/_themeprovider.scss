@@ -1,11 +1,15 @@
 //Fonts
 $font-color: #fffcf7;
 
+//Linear Gradient
+$linear-gradient: linear-gradient(0deg, #00000088 30%, #ffffff44 100%);
+
 //Background
 @mixin weather-background() {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+  background-blend-mode: multiply;
 }
 
 //Modal Position
