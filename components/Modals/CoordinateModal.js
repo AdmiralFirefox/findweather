@@ -1,7 +1,7 @@
 import Modal from "@material-ui/core/Modal";
 import { withStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
-import coordinateStyles from "../../styles/Home.module.scss";
+import coordinateStyles from "../../styles/Modal/CoordinateModal.module.scss";
 
 const CloseCoordinateButton = withStyles(() => ({
   root: {

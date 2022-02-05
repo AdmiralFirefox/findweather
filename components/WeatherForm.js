@@ -1,9 +1,9 @@
-import weatherFormStyles from "../styles/Home.module.scss";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import InputBase from "@material-ui/core/InputBase";
 import IconButton from "@material-ui/core/IconButton";
 import SearchIcon from "@material-ui/icons/Search";
+import weatherFormStyles from "../styles/WeatherForm.module.scss";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,8 +33,8 @@ function WeatherForm({ search, setQuery, query }) {
       <Paper onSubmit={search} component="form" className={classes.root}>
         <InputBase
           className={classes.input}
-          placeholder="Search Google Maps"
-          inputProps={{ "aria-label": "search google maps" }}
+          placeholder="Search Country"
+          inputProps={{ "aria-label": "Search Country" }}
           placeholder="Search City/Country"
           onChange={(e) => setQuery(e.target.value)}
           value={query}

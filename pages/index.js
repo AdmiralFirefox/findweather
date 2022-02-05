@@ -25,7 +25,6 @@ export default function Home() {
         setLoading(false);
         setWeather(res.data);
         setQuery("");
-        // console.log(res.data);
       })
       .catch((err) => {
         console.log(err);

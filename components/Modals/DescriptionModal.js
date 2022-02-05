@@ -1,7 +1,7 @@
 import Modal from "@material-ui/core/Modal";
 import { withStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
-import descriptionModalStyles from "../../styles/Home.module.scss";
+import descriptionModalStyles from "../../styles/Modal/DescriptionModal.module.scss";
 
 const CloseDecriptionButton = withStyles(() => ({
   root: {

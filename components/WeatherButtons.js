@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import DescriptionModal from "./Modals/DescriptionModal";
-import buttonStyles from "../styles/Home.module.scss";
 import CoordinateModal from "./Modals/CoordinateModal";
+import buttonStyles from "../styles/WeatherButton.module.scss";
 
 const CoordinateButtons = withStyles(() => ({
   root: {
