@@ -7,7 +7,7 @@ import CloudIcon from "../assets/cloudy.svg";
 import mainStyles from "../styles/Home.module.scss";
 
 const api = {
-  key: "38715188733ff79741e9473826b3f7f5",
+  key: process.env.NEXT_PUBLIC_API_KEY,
   base: "https://api.openweathermap.org/data/2.5/",
 };
 
